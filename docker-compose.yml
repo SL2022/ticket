@@ -7,7 +7,7 @@ services:
     image: postgres
     restart: always
     volumes:
-      - ./priv/pgdata:/var/lib/postgresql/data
+      - ./priv/pgdata:/var/lib/postgresql/12/main/data
     networks:
       - db
     ports:
