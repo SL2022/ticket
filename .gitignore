@@ -38,3 +38,8 @@ npm-debug.log
 
 # local settings
 .elixir_ls/
+.vscode
+
+# Cypress testing will only be setup by each clone
+/cypress/
+cypress.json
