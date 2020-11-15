@@ -38,3 +38,4 @@ npm-debug.log
 
 # local settings
 .elixir_ls/
+.vscode
