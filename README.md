@@ -8,6 +8,7 @@ To start your local version of Ticket:
   * Clone it (from your profile) onto your local machine
   * Change into the ticket folder `cd ticket`
   * Install Node.js dependencies in the assets folder, with `npm --prefix=assets install` 
+  * Make a folder for that PostgreSQL data, with `mkdir -p priv/pgdata`
   * Start a PostgreSQL container `docker-compose -d up`
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
