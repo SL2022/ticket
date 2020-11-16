@@ -18,6 +18,8 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Need to make sure tests are good? Run `mix test` and all acceptance/system tests with `mix cypress.open`
 
+Looking for documentation? Fret not - `mix docs` - and then `open doc/index.html`
+
 Ready to run in production? --wip--
 
 ## Learn more
