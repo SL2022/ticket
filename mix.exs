@@ -4,13 +4,24 @@ defmodule Ticket.MixProject do
   def project do
     [
       app: :ticket,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      name: "Ticket",
+      source_url: "https://github.com/SL2022/ticket",
+      homepage_url: "https://almanaq.guru",
+      docs: [
+        # The main page in the docs
+        main: "Ticket",
+        logo: "assets/static/images/hindu_almanac.jpg",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -46,6 +57,7 @@ defmodule Ticket.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
       {:plug_cowboy, "~> 2.0"}
     ]
   end
