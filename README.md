@@ -20,7 +20,7 @@ Need to make sure tests are good? Run `mix test` and all acceptance/system tests
 Ready to run in production? --wip--
 
 ## Learn more
-Ticket was built with Elixir and the Phoenix Framework, and acceptance tests done with Cypress - here are som links for your browsing convenience:
+Ticket was built with the PETAL stack (Postgres, Elixir/Phoenix, Tailwind, AlpineJS, Liveview), and acceptance tests done with Cypress - here are som links for your browsing convenience:
 
   * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
@@ -28,3 +28,5 @@ Ticket was built with Elixir and the Phoenix Framework, and acceptance tests don
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
   * Cypress: https://docs.cypress.io/guides/overview/why-cypress.html
+
+PETAL stack, C.f. @ThinkingElixir
