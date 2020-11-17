@@ -39,6 +39,7 @@ npm-debug.log
 # local settings
 .elixir_ls/
 .vscode
+.DS_STORE
 
 # Cypress testing will only be setup by each clone
 /cypress/
