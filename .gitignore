@@ -42,5 +42,5 @@ npm-debug.log
 .DS_STORE
 
 # Cypress testing will only be setup by each clone
-/cypress/
+#/cypress/
 cypress.json
