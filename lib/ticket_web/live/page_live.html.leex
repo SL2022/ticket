@@ -11,6 +11,13 @@
     </datalist>
     <button type="submit" phx-disable-with="Searching...">Go to Hexdocs</button>
   </form>
+  <div class="alpine_test" x-data="{ open: false }">
+      <button @click="open = true">Open Dropdown</button>
+
+      <ul x-show="open" @click.away="open = false">
+          Dropdown Body
+      </ul>
+  </div>
 </section>
 
 <section class="row">

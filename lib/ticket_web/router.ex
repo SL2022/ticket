@@ -17,6 +17,7 @@ defmodule TicketWeb.Router do
   scope "/", TicketWeb do
     pipe_through :browser
 
+    live "/test_workbench", PageLive, :index
     live "/", PageLive, :index
   end
 
