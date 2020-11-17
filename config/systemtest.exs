@@ -1,4 +1,4 @@
-# /config/systemtest.exs
+# /config/systemtest.exs used alongside Cypress for acceptance/end-to-end tests
 
 use Mix.Config
 
