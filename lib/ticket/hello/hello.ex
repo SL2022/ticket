@@ -16,7 +16,7 @@ defmodule Ticket.Hello do
   ## Examples
 
       iex> Ticket.Hello.hello()
-      :worldy
+      :world
 
   """
   def hello do
