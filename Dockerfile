@@ -12,14 +12,13 @@ ENV NODE_ENV=${mix_env} \
   MIX_ENV=${mix_env} \
   APP_PORT=5000 \
   POOL_SIZE=10 \
-  COOL_TEXT='tjuhej' \
   SECRET_KEY_BASE=dyhnmj9oklo0ok7y64332w2excvbhnkmlæ.æ-æp098uuikuygyhgfdw2123esdr5tghy78uhjki \
-  DBUSER='postgres' \
-  DBPWRD='postgres' \
-  DBNAME='almanaq_prod' \
+  DBUSER="postgres" \
+  DBPWRD="postgres" \
+  DBNAME="almanaq_prod" \
   DBHOST="localhost" \
-  URLHOST='almanaq.guru' \
-  DB_URL='postgres://postgres:523f712e4a530654a470064524813e43@dokku-postgres-almanaq-prod:5432/almanaq_prod' \
+  URLHOST="almanaq.guru" \
+  DB_URL="postgres://postgres:523f712e4a530654a470064524813e43@dokku-postgres-almanaq-prod:5432/almanaq_prod" \
   HEX_MIRROR_URL=${hex_mirror_url} 
 
 # EXPOSE 5000 - handled by Dokku !
