@@ -8,6 +8,7 @@ password = System.fetch_env!("DBPWRD")
 database = System.fetch_env!("DBNAME")
 hostname = System.fetch_env!("DBHOST")
 urlhost = System.fetch_env!("URLHOST")
+database_url = System.fetch_env!("DB_URL")
 
 # database_url =
 #   System.get_env("DATABASE_URL") ||
@@ -24,7 +25,7 @@ config :ticket, Ticket.Repo,
   password: password,
   database: database,
   hostname: hostname,
-  # url: database_url,da
+  url: database_url,
   pool_size: String.to_integer(pool_size || "10")
 
 config :ticket, TicketWeb.Endpoint,
