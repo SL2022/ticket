@@ -75,8 +75,8 @@ RUN chown -R nobody:nobody /app
 
 USER nobody:nobody
 
-# COPY --chown=nobody:nobody /app/_build/prod/rel/fish ./
+# COPY --chown=nobody:nobody /app/_build/prod/rel/ticket ./
 
-# ENV HOME=/app/_build/prod/rel/fish
+# ENV HOME=/app/_build/prod/rel/ticket
 
-CMD ["/app/_build/prod/rel/fish/bin/fish", "start"]
+CMD ["/app/_build/prod/rel/ticket/bin/ticket", "start"]

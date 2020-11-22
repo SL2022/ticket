@@ -16,7 +16,7 @@ urlhost = System.fetch_env!("URLHOST")
 #     For example: ecto://USER:PASS@HOST/DATABASE
 #     """
 
-config :ticket, Fish.Repo,
+config :ticket, Ticket.Repo,
   # ssl: true,
   migration_primary_key: [name: :id, type: :binary_id],
   show_sensitive_data_on_connection_error: true,
@@ -37,7 +37,7 @@ config :ticket, TicketWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :fish, FishWeb.Endpoint, server: true
+#     config :ticket, TicketWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
