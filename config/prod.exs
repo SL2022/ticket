@@ -1,7 +1,6 @@
 use Mix.Config
 
 secret_key_base = System.fetch_env!("SECRET_KEY_BASE")
-cool_text = System.fetch_env!("COOL_TEXT")
 application_port = System.fetch_env!("APP_PORT")
 pool_size = System.fetch_env!("POOL_SIZE")
 username = System.fetch_env!("DBUSER")
