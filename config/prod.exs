@@ -27,6 +27,8 @@ config :ticket, Ticket.Repo,
   password: password,
   database: database,
   hostname: hostname,
+  url:
+    'postgres://postgres:523f712e4a530654a470064524813e43@dokku-postgres-almanaq-prod:5432/almanaq_prod',
   # url: database_url,
   pool_size: String.to_integer(pool_size || "10")
 
