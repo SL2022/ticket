@@ -10,6 +10,7 @@ To start your local version of Ticket:
   * Clone it (from your profile) onto your local machine
   * Change into the ticket folder `cd ticket`
   * Install Node.js dependencies in the assets folder, with `npm --prefix=assets install` 
+  * Install Cypress - for testing acceptance tests, with `npm --prefix=assets install cypress --save-dev`
   * Make a folder for that PostgreSQL data, with `mkdir -p priv/pgdata`
   * Start a PostgreSQL container `docker-compose -d up`
   * Install dependencies with `mix deps.get`
@@ -18,15 +19,37 @@ To start your local version of Ticket:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Need to make sure tests are good? Run `mix test` and all acceptance/system tests with `mix cypress.open`
+Need to make sure tests are good? Run `mix test` and all acceptance/system tests with `mix cypress.open` (but make sure your local application server - `iex -S mix phx.server` is running)
 
 Looking for documentation? Fret not - `mix docs` - and then `open doc/index.html`
 
 ## Ready to go to war?
 Do you feel Ticket has what it takes to provide for your situation?
 
- --wip--
+  * [Install Dokku](http://dokku.viewdocs.io/dokku~v0.21.4/getting-started/installation/) on a server - that sounds a lot easier than it is (particularly if it's a reinstall!)
+  * Create an app-server, with `dokku apps:create almanaq.guru` (at the CLI of the server)
+  * Add a remote to your repo, with `git remote add almanaq.guru dokku@docker1.alco.dk:almanaq.guru`
+  * Add a database plugin, with `dokku plugin:install https://github.com/dokku/dokku-postgres.git` (only if the app requires its own database - at the CLI of the server)
+  * Create a database using this plugin, with `dokku postgres:create almanaq_prod` (still only if required - and still at the CLI of the server )
+  * Link the two together, with `dokku postgres:link almanaq_prod almanaq.guru` (still at the CLI of the server)
+  * Push the repo, with `git push almanaq.guru main:master` (as master is the required branch to deploy to)
+  * Add a SSL plugin, with `dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git` (at the CLI of the server)
+  * Configure the email for the domain, with `dokku config:set --no-restart almanaq.guru DOKKU_LETSENCRYPT_EMAIL=walther@alco.dk` (at the CLI of the server)
+  * Set the SSL for the almanaq.guru domain, with `dokku letsencrypt almanaq.guru`
+  
+Wondering what the app.json in the root of the repo does? It's taking care of any `mix ecto.migrate`to be executed on the server!
 
+```
+ !     Postdeploy command declared: 'mix ecto.migrate'
+       09:19:12.459 [info]  Migrations already up
+-----> Shutting down old containers in 60 seconds
+       28d5038364571538b9abef0abd1c243ef89f880fc90f9b1241188eb12e8b9c45
+=====> Application deployed:
+       http://almanaq.guru
+       https://almanaq.guru
+```
+
+That was 12 terrifying hours - mixed with 4hrs sleep :o
 ## Contributing
 We'd really like you to chip in!
 
