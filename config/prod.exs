@@ -8,6 +8,7 @@ password = System.fetch_env!("DBPWRD")
 database = System.fetch_env!("DBNAME")
 hostname = System.fetch_env!("DBHOST")
 urlhost = System.fetch_env!("URLHOST")
+database_url = System.fetch_env!("DB_URL")
 
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
@@ -26,8 +27,7 @@ config :ticket, Ticket.Repo,
   password: password,
   database: database,
   hostname: hostname,
-  url:
-    'postgres://postgres:523f712e4a530654a470064524813e43@dokku-postgres-almanaq-prod:5432/almanaq_prod',
+  url: database_url,
   # url: database_url,
   pool_size: String.to_integer(pool_size || "10")
 
